@@ -17,6 +17,10 @@ We use a subset of the [RAG-60K](https://github.com/CSCfi/RAG-60K) copernicus da
 Generating multi vector embeddings for thousands of PDF image pages can take hours. This project uses Torch Distributed Data Parallel (DDP) to utilize one full node (8 GPUs) on LUMI to speed things up.
 Embeddings are gathered on one GPU for uploading to Qdrant. This pipeline has been tested on 10K PDFs. 
 
+## How to run
+
+work in progress
+
 ## Notes
 
 - Loading the Qdrant client for querying from 10k PDFs took very long (80mins), not making this approach suitable for very large datasets. 
