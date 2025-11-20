@@ -19,8 +19,8 @@ from qdrant_client.http import models
 
 source_folder = "/scratch/project_462000824/amoisala/RAG-60K/data/copernicus"
 model_name = "vidore/colqwen2-v1.0-hf"
-index_path = "./qdrant_index_10k"
-collection_name = "qdrant_index_10k"
+index_path = "./qdrant_index"
+collection_name = "qdrant_index"
 os.makedirs(index_path, exist_ok=True)
 
 batch_size = 8
@@ -29,7 +29,7 @@ num_workers = 4
 class PDFImagesDataset(Dataset):
     def __init__(self, pdf_folder):
         self.pages = []
-        self.pdf_files = [f for f in os.listdir(pdf_folder) if f.endswith(".pdf")][:1000]
+        self.pdf_files = [f for f in os.listdir(pdf_folder) if f.endswith(".pdf")][:1000] # Use a subset of data
         for pdf_file in self.pdf_files:
             pdf_path = os.path.join(pdf_folder, pdf_file)
             try:
