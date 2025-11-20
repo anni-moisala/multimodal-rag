@@ -53,13 +53,13 @@ sbatch run_ingest.sh
 
 ### Run query.py
 
-Run  `query.py` interactively by requesting resources (change your project code):
+Run  `query.py` interactively by requesting resources (change your project code).
 
 ```bash
 srun --account=project_462000824 --partition=dev-g --ntasks=1 --cpus-per-task=7 --gpus-per-node=1 --mem=120G  --time=01:00:00 --nodes=1 --pty bash 
 ```
 
-load module, load container, set HF cache dir and activate venv
+Load module, load container, set HF cache dir and activate venv.
 
 ```bash
 module purge                                                                                                                 
@@ -72,7 +72,7 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 
 source venv/bin/activate
 ```
-then run the script
+Then, run the script.
 
 ```bash
 python3 query.py
@@ -80,4 +80,6 @@ python3 query.py
 
 ## Notes
 
-- Loading the Qdrant client for querying from 10k PDFs took very long (80mins), not making this approach suitable for very large datasets. 
+Loading the Qdrant client for querying from 10k PDFs took very long (80mins).
+However, search is fast due to HNSW indexing, and qdrant offers for example built in quantization for further speedups.  
+Also check out this alternative implementation does not require any external package for a vector database: https://github.com/shanshanwangcsc/Multimodal-RAG/tree/main.
