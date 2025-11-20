@@ -4,7 +4,7 @@ This project implements multimodal RAG incorporating both text and visual conten
 
 Retrieval is done using [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0-hf), a document retrieval model based on [ColPali](https://huggingface.co/blog/manu/colpali), which uses vision LLMs + late interaction to embed and retrieve image representation of document pages, preserving full visual content.
 
-The embedding are stored in a self hosted on disk [Qdrant](https://qdrant.tech/) vector database. Qdrant is an open source vector database that supports multi vector (late interaction) embeddings created by ColQwen.
+The embedding are stored in a [Qdrant](https://qdrant.tech/) vector database on disk. Qdrant is an open source vector database that supports multi vector (late interaction) embeddings created by ColQwen.
 
 Finally, the retrieved images are given to a [Qwen2.5](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) vision language model for answer generation.
 
