@@ -1,6 +1,6 @@
 # Multimodal RAG using ColQwen and Qdrant
 
-This project implements multimodal RAG incorporating both text and visual contents from document page images.
+This project implements **multimodal RAG** incorporating both text and visual contents from document page images.
 
 Retrieval is done using [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0-hf), a document retrieval model based on [ColPali](https://huggingface.co/blog/manu/colpali), which uses vision LLMs + late interaction to embed and retrieve image representation of document pages, preserving full visual content.
 
