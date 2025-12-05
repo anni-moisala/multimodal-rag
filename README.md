@@ -82,4 +82,4 @@ python3 query.py
 
 Loading the Qdrant client for querying from 10k PDFs took very long (80mins).
 However, search is fast due to HNSW indexing, and qdrant offers for example built in quantization for further speedups.  
-Also check out this alternative implementation that does not require any external package for a vector database: https://github.com/shanshanwangcsc/Multimodal-RAG/tree/main.
+Also, see this alternative implementation that does not require any external package for a vector database: https://github.com/shanshanwangcsc/Multimodal-RAG/tree/main.
